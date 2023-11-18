@@ -1,11 +1,12 @@
-import React from "react";
+import Api from "../components/Api";
+import Cards from "../components/Cards";
 
-const Home = () => {
+const Home = ({ data }) => {
   return (
     <div>
-      <h1>Titre</h1>
+      <img src="" alt="sea-and-rock" />
+      {data && <Cards data={data} />}
     </div>
   );
 };
-
 export default Home;
