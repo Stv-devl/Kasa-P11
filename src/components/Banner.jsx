@@ -5,8 +5,8 @@ const Banner = () => {
     <div className="nav-container">
       <img src="" alt="logo-Kasa" />
       <div className="nav-wrapper">
-        <NavLink>Accueil</NavLink>
-        <NavLink>A propos</NavLink>
+        <NavLink to="/home">Accueil</NavLink>
+        <NavLink to="/about">A propos</NavLink>
       </div>
     </div>
   );

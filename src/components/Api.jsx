@@ -3,15 +3,14 @@ import axios from "axios";
 
 const Api = ({ setData }) => {
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const res = await axios.get("logements.json");
+    axios
+      .get("../logements.json")
+      .then((res) => {
         setData(res.data);
-      } catch (error) {
+      })
+      .catch((error) => {
         console.error("Erreur", error);
-      }
-    };
-    getData();
+      });
   }, [setData]);
 
   return null;
