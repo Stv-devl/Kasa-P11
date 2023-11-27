@@ -1,1 +1,7 @@
-@import "./settings";
+@import "./settings/colors";
+@import "./settings/fonts";
+@import "./settings/mixins";
+@import "./settings/settings";
+@import "./components/header";
+@import "./components/footer";
+@import "./pages/home";

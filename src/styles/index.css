@@ -1,0 +1,156 @@
+/***************************Setting colors***************************/
+/****************************setting fonts***************************/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+/**************************setting text***************************/
+body {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+p {
+  font-weight: 400;
+}
+
+footer,
+.nav-wrapper {
+  font-size: 24px;
+}
+footer .a,
+.nav-wrapper .a {
+  color: #ff6060;
+}
+
+/*************************Setting mixin************************/
+/***************************************************************/
+/*setting*/
+/***************************************************************/
+/*************************Setting page**************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  margin-block: 0;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  max-width: 1450px;
+  text-align: center;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+/*************Text link & img fit & icone color***************/
+a,
+a:visited {
+  color: #ff6060;
+  text-decoration: none;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*************************breakup**************************/
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 5% 50px 5%;
+}
+nav .nav-wrapper {
+  display: flex;
+  gap: 57px;
+}
+nav .nav-wrapper a {
+  transition: 0.4s ease-in-out;
+}
+nav .nav-wrapper a:hover {
+  text-decoration: underline;
+}
+nav .nav-wrapper .active {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #ffffff;
+  gap: 28px;
+  padding: 66px 0 29px 0;
+  width: 100%;
+}
+
+section {
+  margin: 0 5%;
+}
+section .image-wrapper {
+  position: relative;
+}
+section .image-wrapper h2 {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+section .image-wrapper .seaImage {
+  width: 100%;
+  height: 223px;
+  border-radius: 25px;
+  filter: brightness(0.65) contrast(150%);
+  z-index: 0;
+}
+section .cards-container {
+  background-color: #f6f6f6;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 30% 30% 30%;
+  -moz-column-gap: 3.4%;
+       column-gap: 3.4%;
+  row-gap: 42px;
+  padding: 56px 3.3% 43px 3.3%;
+  margin: 50px 0 50px 0;
+  border-radius: 25px;
+}
+section .cards-container .card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 340px;
+}
+section .cards-container .card-wrapper img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.7) contrast(130%);
+  border-radius: 10px;
+  z-index: 0;
+}
+section .cards-container .card-wrapper .appartement-title {
+  position: absolute;
+  text-align: left;
+  width: 75%;
+  top: 95%;
+  left: 15%;
+  transform: translate(-15%, -95%);
+  z-index: 1;
+  color: #ffffff;
+}/*# sourceMappingURL=index.css.map */

@@ -1,5 +1,6 @@
+import Rating from "./Rating";
+
 const Location = ({ data }) => {
-  console.log(data);
   return (
     <div>
       <div>
@@ -22,7 +23,9 @@ const Location = ({ data }) => {
               </li>
             ))}
           </ul>
-          <div className="star-wrapper"></div>
+          <div className="star-wrapper">
+            <Rating data={data} />
+          </div>
         </div>
       </div>
       <p>{data.title}</p>

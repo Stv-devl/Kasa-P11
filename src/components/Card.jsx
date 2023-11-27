@@ -4,7 +4,7 @@ const Card = ({ data }) => {
   return (
     <Link to={`/rent/${data.id}`} className="card-wrapper" data={data}>
       <img src={data.cover} alt={`${data.title}-appartement`} />
-      <p>{data.title}</p>
+      <p className="appartement-title">{data.title}</p>
     </Link>
   );
 };

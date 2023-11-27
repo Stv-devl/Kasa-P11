@@ -1,12 +1,14 @@
-import Api from "../components/Api";
 import Cards from "../components/Cards";
 
 const Home = ({ data }) => {
   return (
-    <div>
-      <img src="" alt="sea-and-rock" />
+    <section className="page">
+      <div className="image-wrapper">
+        <h2>Chez vous, partout et ailleurs</h2>
+        <img className="seaImage" src="./img.png" alt="sea-and-rock" />
+      </div>
       {data && <Cards data={data} />}
-    </div>
+    </section>
   );
 };
 export default Home;
