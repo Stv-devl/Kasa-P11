@@ -1,0 +1,45 @@
+.profil-container {
+  @include space-between-row;
+  color: $lightRed;
+  margin-top: 20px;
+
+  .title-wrapper {
+    text-align: left;
+
+    .location {
+      margin-top: 5px;
+    }
+  }
+
+  .profil-wrapper {
+    @include center-row;
+    gap: 10px;
+
+    .profil-name {
+      text-align: right;
+    }
+    .profil-picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 100%;
+    }
+  }
+}
+.rating-container {
+  @include space-between-row;
+  margin-top: 20px;
+
+  .tag-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .tag {
+      @include center;
+      height: 30px;
+      background-color: $lightRed;
+      border-radius: 10px;
+      padding: 3px 40px;
+    }
+  }
+}

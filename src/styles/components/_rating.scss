@@ -1,0 +1,15 @@
+.star-wrapper {
+  display: flex;
+  gap: 8px;
+
+  .star {
+    font-size: 25px;
+  }
+
+  .full {
+    color: $lightRed;
+  }
+  .empty {
+    color: $grey;
+  }
+}
