@@ -1,14 +1,14 @@
-import Dropdown from "./Dropdown";
-import Lightbox from "./Lightbox";
+import Collapses from "./Collapses";
+import Carousel from "./Carousel";
 import Rating from "./Rating";
 
-const Location = ({ data }) => {
+const Rent = ({ data }) => {
   let splitName = data.host.name.split(" ");
 
   return (
     <>
-      <div className="lightBox-container">
-        <Lightbox data={data} />
+      <div className="carousel-container">
+        <Carousel data={data} />
       </div>
 
       <div className="description-container">
@@ -44,17 +44,17 @@ const Location = ({ data }) => {
         </div>
       </div>
 
-      <div className="dropdown-container">
-        <div className="dropdown-wrapper description">
-          <Dropdown
+      <div className="collapse-container">
+        <div className="collapse-wrapper">
+          <Collapses
             dataDrop={data.description}
             title="Description"
             type="desc"
           />
         </div>
 
-        <div className="dropdown-wrapper equipements">
-          <Dropdown
+        <div className="collapse-wrapper">
+          <Collapses
             dataDrop={data.equipments}
             title="Équipements"
             type="list"
@@ -65,4 +65,4 @@ const Location = ({ data }) => {
   );
 };
 
-export default Location;
+export default Rent;

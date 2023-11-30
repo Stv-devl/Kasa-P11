@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Rent from "./pages/Rent";
-import Error from "./pages/Error";
-import Banner from "./components/Banner";
-import Footer from "./components/Footer";
 import Api from "./components/Api";
+import Banner from "./components/Banner";
+import Home from "./pages/Home";
+import Appartement from "./pages/Appartement";
+import About from "./pages/About";
+import Error from "./pages/Error";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [data, setData] = useState(null);
@@ -18,8 +18,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home data={data} />} />
         <Route path="/home" element={<Home data={data} />} />
-        <Route path="/rent" element={<Rent data={data} />} />
-        <Route path="/rent/:id" element={<Rent data={data} />} />
+        <Route path="/rent" element={<Appartement data={data} />} />
+        <Route path="/rent/:id" element={<Appartement data={data} />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>

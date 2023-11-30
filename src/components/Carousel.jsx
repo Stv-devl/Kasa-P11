@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Lightbox = ({ data }) => {
+const Carousel = ({ data }) => {
   const [indexNumber, setIndexNumber] = useState(0);
 
   return (
@@ -29,4 +29,4 @@ const Lightbox = ({ data }) => {
   );
 };
 
-export default Lightbox;
+export default Carousel;
