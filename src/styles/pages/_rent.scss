@@ -1,0 +1,158 @@
+.appartements {
+  margin: 0 4%;
+  height: 100%;
+
+  .image_wrapper {
+    position: relative;
+
+    .appartement-image {
+      width: 100%;
+      height: 415px;
+      border-radius: 25px;
+    }
+
+    .fa-chevron-right,
+    .fa-chevron-left {
+      position: absolute;
+      color: $white;
+      font-size: 80px;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: $lightRed;
+      }
+    }
+
+    .fa-chevron-left {
+      top: 50%;
+      left: 2%;
+      transform: translate(-2%, -50%);
+    }
+
+    .fa-chevron-right {
+      top: 50%;
+      right: 2%;
+      transform: translate(-2%, -50%);
+    }
+
+    .counter {
+      position: absolute;
+      right: 50%;
+      top: 90%;
+      transform: translate(-50%, -90%);
+      color: $white;
+    }
+  }
+  .profil-container {
+    @include space-between-row;
+    color: $lightRed;
+    margin-top: 20px;
+
+    .title-wrapper {
+      text-align: left;
+
+      .location {
+        margin-top: 5px;
+      }
+    }
+
+    .profil-wrapper {
+      @include center-row;
+      gap: 10px;
+
+      .profil-name {
+        text-align: right;
+      }
+      .profil-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+      }
+    }
+  }
+  .rating-container {
+    @include space-between-row;
+    margin-top: 20px;
+
+    .tag-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .tag {
+        @include center;
+        height: 30px;
+        background-color: $lightRed;
+        border-radius: 10px;
+        padding: 3px 40px;
+      }
+    }
+
+    .star-wrapper {
+      display: flex;
+      gap: 8px;
+
+      .star {
+        font-size: 25px;
+      }
+
+      .full {
+        color: $lightRed;
+      }
+      .empty {
+        color: $grey;
+      }
+    }
+  }
+  .dropdown-container {
+    display: flex;
+    gap: 8%;
+    height: 100%;
+
+    .dropdown-wrapper {
+      width: 46%;
+      margin: 24px 0 0 0;
+      color: $white;
+
+      .menu-wrapper {
+        position: relative;
+        z-index: 2;
+        @include space-between-row;
+        align-items: center;
+        height: 52px;
+        background-color: $lightRed;
+        border-radius: 10px;
+        padding: 15px 20px 15px 10px;
+
+        .fa-chevron-up {
+          font-size: 25px;
+          cursor: pointer;
+          transform: rotate(0);
+          transition: transform 0.4s ease-in-out;
+        }
+
+        .turn {
+          transform: rotate(180deg);
+        }
+      }
+      .dropdown {
+        position: relative;
+        z-index: 1;
+        max-height: 0;
+        overflow: hidden;
+        top: -50px;
+        text-align: left;
+        color: $lightRed;
+        background-color: $lightGrey;
+        padding: 15px;
+        transition: max-height 0.4s ease-in-out, transform 0.4s ease-in-out;
+      }
+
+      .active {
+        transform: translateY(50px);
+        max-height: 300px;
+      }
+    }
+  }
+}

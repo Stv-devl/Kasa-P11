@@ -12,14 +12,16 @@ h1 {
   font-weight: 500;
 }
 
-h2 {
+.home-page-title {
   font-size: 48px;
   font-weight: 500;
   color: #ffffff;
 }
 
-p {
-  font-weight: 400;
+.appartement-page-title {
+  font-size: 36px;
+  font-weight: 500;
+  color: #ff6060;
 }
 
 footer,
@@ -29,6 +31,11 @@ footer,
 footer .a,
 .nav-wrapper .a {
   color: #ff6060;
+}
+
+.tag {
+  font-size: 14px;
+  color: #ffffff;
 }
 
 /*************************Setting mixin************************/
@@ -47,7 +54,7 @@ footer .a,
 }
 
 body {
-  max-width: 1450px;
+  max-width: 1850px;
   text-align: center;
   background-color: #ffffff;
   margin: 0 auto;
@@ -66,24 +73,26 @@ img {
 }
 
 /*************************breakup**************************/
-nav {
+header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 45px 5% 50px 5%;
 }
-nav .nav-wrapper {
+header nav {
   display: flex;
+  -moz-columns: 50%;
+       columns: 50%;
   gap: 57px;
 }
-nav .nav-wrapper a {
+header nav a {
   transition: 0.4s ease-in-out;
 }
-nav .nav-wrapper a:hover {
+header nav a:hover {
   text-decoration: underline;
 }
-nav .nav-wrapper .active {
+header nav .active {
   text-decoration: underline;
 }
 
@@ -97,15 +106,16 @@ footer {
   gap: 28px;
   padding: 66px 0 29px 0;
   width: 100%;
+  margin-top: 60px;
 }
 
-section {
-  margin: 0 5%;
+.main-home {
+  margin: 0 4%;
 }
-section .image-wrapper {
+.main-home .banner-image-wrapper {
   position: relative;
 }
-section .image-wrapper h2 {
+.main-home .banner-image-wrapper h2 {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -113,14 +123,14 @@ section .image-wrapper h2 {
   transform: translate(-50%, -50%);
   z-index: 1;
 }
-section .image-wrapper .seaImage {
+.main-home .banner-image-wrapper .seaImage {
   width: 100%;
   height: 223px;
   border-radius: 25px;
   filter: brightness(0.65) contrast(150%);
   z-index: 0;
 }
-section .cards-container {
+.main-home .cards-container {
   background-color: #f6f6f6;
   display: grid;
   justify-content: center;
@@ -132,19 +142,19 @@ section .cards-container {
   margin: 50px 0 50px 0;
   border-radius: 25px;
 }
-section .cards-container .card-wrapper {
+.main-home .cards-container .card-wrapper {
   position: relative;
   width: 100%;
   height: 340px;
 }
-section .cards-container .card-wrapper img {
+.main-home .cards-container .card-wrapper img {
   width: 100%;
   height: 100%;
   filter: brightness(0.7) contrast(130%);
   border-radius: 10px;
   z-index: 0;
 }
-section .cards-container .card-wrapper .appartement-title {
+.main-home .cards-container .card-wrapper .appartement-title {
   position: absolute;
   text-align: left;
   width: 75%;
@@ -153,4 +163,149 @@ section .cards-container .card-wrapper .appartement-title {
   transform: translate(-15%, -95%);
   z-index: 1;
   color: #ffffff;
+}
+
+.appartements {
+  margin: 0 4%;
+  height: 100%;
+}
+.appartements .image_wrapper {
+  position: relative;
+}
+.appartements .image_wrapper .appartement-image {
+  width: 100%;
+  height: 415px;
+  border-radius: 25px;
+}
+.appartements .image_wrapper .fa-chevron-right,
+.appartements .image_wrapper .fa-chevron-left {
+  position: absolute;
+  color: #ffffff;
+  font-size: 80px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.appartements .image_wrapper .fa-chevron-right:hover,
+.appartements .image_wrapper .fa-chevron-left:hover {
+  color: #ff6060;
+}
+.appartements .image_wrapper .fa-chevron-left {
+  top: 50%;
+  left: 2%;
+  transform: translate(-2%, -50%);
+}
+.appartements .image_wrapper .fa-chevron-right {
+  top: 50%;
+  right: 2%;
+  transform: translate(-2%, -50%);
+}
+.appartements .image_wrapper .counter {
+  position: absolute;
+  right: 50%;
+  top: 90%;
+  transform: translate(-50%, -90%);
+  color: #ffffff;
+}
+.appartements .profil-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ff6060;
+  margin-top: 20px;
+}
+.appartements .profil-container .title-wrapper {
+  text-align: left;
+}
+.appartements .profil-container .title-wrapper .location {
+  margin-top: 5px;
+}
+.appartements .profil-container .profil-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.appartements .profil-container .profil-wrapper .profil-name {
+  text-align: right;
+}
+.appartements .profil-container .profil-wrapper .profil-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+.appartements .rating-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.appartements .rating-container .tag-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.appartements .rating-container .tag-wrapper .tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  background-color: #ff6060;
+  border-radius: 10px;
+  padding: 3px 40px;
+}
+.appartements .rating-container .star-wrapper {
+  display: flex;
+  gap: 8px;
+}
+.appartements .rating-container .star-wrapper .star {
+  font-size: 25px;
+}
+.appartements .rating-container .star-wrapper .full {
+  color: #ff6060;
+}
+.appartements .rating-container .star-wrapper .empty {
+  color: #bcbcbc;
+}
+.appartements .dropdown-container {
+  display: flex;
+  gap: 8%;
+  height: 100%;
+}
+.appartements .dropdown-container .dropdown-wrapper {
+  width: 46%;
+  margin: 24px 0 0 0;
+  color: #ffffff;
+}
+.appartements .dropdown-container .dropdown-wrapper .menu-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  background-color: #ff6060;
+  border-radius: 10px;
+  padding: 15px 20px 15px 10px;
+}
+.appartements .dropdown-container .dropdown-wrapper .menu-wrapper .fa-chevron-up {
+  font-size: 25px;
+  cursor: pointer;
+}
+.appartements .dropdown-container .dropdown-wrapper .dropdown {
+  position: relative;
+  z-index: 1;
+  max-height: 0;
+  overflow: hidden;
+  top: -50px;
+  text-align: left;
+  color: #ff6060;
+  background-color: #f6f6f6;
+  padding: 15px;
+  transition: max-height 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+.appartements .dropdown-container .dropdown-wrapper .active {
+  transform: translateY(50px);
+  max-height: 300px;
 }/*# sourceMappingURL=index.css.map */

@@ -5,12 +5,12 @@ const Rent = ({ data }) => {
   let { id } = useParams();
 
   return (
-    <div>
+    <main className="appartements">
       {data &&
         data
           .filter((el) => el.id === id)
           .map((item) => <Location key={item.id} data={item} />)}
-    </div>
+    </main>
   );
 };
 

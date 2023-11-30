@@ -1,7 +1,7 @@
-section {
-  margin: 0 5%;
+.main-home {
+  margin: 0 4%;
 
-  .image-wrapper {
+  .banner-image-wrapper {
     position: relative;
 
     h2 {
@@ -23,7 +23,7 @@ section {
   }
 
   .cards-container {
-    background-color: $lightGray;
+    background-color: $lightGrey;
     display: grid;
     justify-content: center;
     grid-template-columns: 30% 30% 30%;

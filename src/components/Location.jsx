@@ -1,16 +1,31 @@
+import Dropdown from "./Dropdown";
+import Lightbox from "./Lightbox";
 import Rating from "./Rating";
 
 const Location = ({ data }) => {
+  let splitName = data.host.name.split(" ");
+
   return (
-    <div>
-      <div>
-        <img src={data.cover} alt={`${data.title}-appartement`} />
-        <div className="flex">
-          <h2>{data.title}</h2>
+    <>
+      <div className="lightBox-container">
+        <Lightbox data={data} />
+      </div>
+
+      <div className="description-container">
+        <div className="profil-container">
+          <div className="title-wrapper">
+            <h2 className="appartement-page-title">{data.title}</h2>
+            <p className="location">{data.location}</p>
+          </div>
           <div className="profil-wrapper">
-            <p className={data.host.name}></p>
+            <p className="profil-name">
+              {splitName[0]}
+              <br />
+              {splitName[1]}
+            </p>
             <img
-              src={data.host.name}
+              className="profil-picture"
+              src={data.host.picture}
               alt={`appartement de ${data.host.name}`}
             />
           </div>
@@ -28,18 +43,25 @@ const Location = ({ data }) => {
           </div>
         </div>
       </div>
-      <p>{data.title}</p>
+
       <div className="dropdown-container">
-        <div className="description-wrapper">{data.description}</div>
-        <ul className="equipement-wrapper">
-          {data.equipments.map((equipment, index) => (
-            <li key={index} className="equipment">
-              {equipment}
-            </li>
-          ))}
-        </ul>
+        <div className="dropdown-wrapper description">
+          <Dropdown
+            dataDrop={data.description}
+            title="Description"
+            type="desc"
+          />
+        </div>
+
+        <div className="dropdown-wrapper equipements">
+          <Dropdown
+            dataDrop={data.equipments}
+            title="Équipements"
+            type="list"
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

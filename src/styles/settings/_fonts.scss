@@ -13,14 +13,16 @@ h1 {
   font-weight: 500;
 }
 
-h2 {
+.home-page-title {
   font-size: 48px;
   font-weight: 500;
   color: $white;
 }
 
-p {
-  font-weight: 400;
+.appartement-page-title {
+  font-size: 36px;
+  font-weight: 500;
+  color: $lightRed;
 }
 
 footer,
@@ -30,4 +32,9 @@ footer,
   .a {
     color: $lightRed;
   }
+}
+
+.tag {
+  font-size: 14px;
+  color: $white;
 }
