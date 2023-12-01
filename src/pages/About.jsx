@@ -6,8 +6,8 @@ const About = () => {
   return (
     <main>
       <img className="mountainsIgm" src="../Kalen-emsley.png" alt="mountains" />
-      <div className="collapse-container">
-        <div className="collapse-wrapper about">
+      <div className="collapse-container-about">
+        <div className="collapse-wrapper-about">
           {dataAbout.map((item, index) => (
             <Collapses
               dataDrop={item.description}

@@ -16,5 +16,8 @@
     border-radius: 25px;
     filter: brightness(0.65) contrast(150%);
     z-index: 0;
+    @media screen and (max-width: $breakup) {
+      height: 111px;
+    }
   }
 }

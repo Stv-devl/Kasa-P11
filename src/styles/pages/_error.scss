@@ -1,13 +1,19 @@
 .error {
-  margin: 100px 0;
+  margin: 139px 0;
+  @media screen and (max-width: $breakup) {
+    margin: 113px 0;
+  }
 }
 
 .oups {
   margin-bottom: 139px;
+  @media screen and (max-width: $breakup) {
+    margin: 113px 0;
+  }
 }
 
 .backHome {
   display: inline-block;
-  height: 120px;
+  height: 12px;
   text-decoration: underline;
 }

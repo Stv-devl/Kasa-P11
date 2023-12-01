@@ -3,11 +3,23 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 45px 5% 50px 5%;
+  @media screen and (max-width: $breakup) {
+    margin: 20px 5% 25px 5%;
+  }
+
+  .logo {
+    width: 210px;
+    @media screen and (max-width: $breakup) {
+      width: 145px;
+    }
+  }
 
   nav {
     display: flex;
-    columns: 50%;
     gap: 57px;
+    @media screen and (max-width: $breakup) {
+      gap: 20px;
+    }
 
     a {
       transition: 0.4s ease-in-out;

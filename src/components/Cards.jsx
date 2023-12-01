@@ -5,10 +5,14 @@ const Cards = ({ data }) => {
   return (
     <div className="cards-container">
       {data &&
-        data.map((item) => (
-          <Link to={`/rent/${item.id}`} className="card-wrapper">
-            <img src={item.cover} alt={`${item.title}-appartement`} />
-            <p className="appartement-title">{item.title}</p>
+        data.map((data, index) => (
+          <Link
+            to={`/rent/${data.id}`}
+            key={`card ${index}`}
+            className="card-wrapper"
+          >
+            <img src={data.cover} alt={`${data.title}-appartement`} />
+            <p className="appartement-title">{data.title}</p>
           </Link>
         ))}
     </div>

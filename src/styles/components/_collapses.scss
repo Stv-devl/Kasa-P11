@@ -1,31 +1,44 @@
+//////////////////////Appartement/////////////////////////
 .collapse-container {
-  display: flex;
-  justify-content: center;
+  @include center-row-justify;
   gap: 8%;
   height: 100%;
+  margin-top: 24px;
+
+  @media screen and (max-width: $breakup) {
+    @include center-column;
+    margin-top: 10px;
+  }
 
   .collapse-wrapper {
     width: 46%;
-    margin: 24px 0 0 0;
     color: $white;
+    @media screen and (max-width: $breakup) {
+      width: 100%;
+    }
 
     .menu-wrapper {
+      @include space-between-row-center;
       position: relative;
       z-index: 2;
-      @include space-between-row;
       align-items: center;
       height: 52px;
       background-color: $lightRed;
       border-radius: 10px;
       padding: 15px 20px 15px 10px;
+      @media screen and (max-width: $breakup) {
+        height: 30px;
+      }
 
       .fa-chevron-up {
         font-size: 25px;
         cursor: pointer;
         transform: rotate(0);
         transition: transform 0.4s ease-in-out;
+        @media screen and (max-width: $breakup) {
+          font-size: 18px;
+        }
       }
-
       .turn {
         transform: rotate(180deg);
       }
@@ -37,19 +50,91 @@
       overflow: hidden;
       top: -50px;
       text-align: left;
+      padding: 15px;
       color: $lightRed;
       background-color: $lightGrey;
-      padding: 15px;
       transition: max-height 0.4s ease-in-out, transform 0.4s ease-in-out;
+      @media screen and (max-width: $breakup) {
+        top: -30px;
+        padding: 10px;
+      }
     }
 
     .active {
       transform: translateY(50px);
       max-height: 300px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      @media screen and (max-width: $breakup) {
+        transform: translateY(30px);
+        margin-bottom: 20px;
+      }
     }
   }
-  .about {
-    width: 86%;
+}
+
+//////////////////////about/////////////////////////
+.collapse-container-about {
+  @include center-row-justify;
+
+  .collapse-wrapper-about {
+    @include direction-column;
+    width: 82%;
+    color: $white;
+    @media screen and (max-width: $breakup) {
+      width: 100%;
+    }
+
+    .menu-wrapper {
+      @include space-between-row-center;
+      position: relative;
+      z-index: 2;
+      align-items: center;
+      height: 52px;
+      background-color: $lightRed;
+      border-radius: 10px;
+      padding: 15px 20px 15px 10px;
+      @media screen and (max-width: $breakup) {
+        height: 30px;
+      }
+
+      .fa-chevron-up {
+        font-size: 25px;
+        cursor: pointer;
+        transform: rotate(0);
+        transition: transform 0.4s ease-in-out;
+        @media screen and (max-width: $breakup) {
+          font-size: 18px;
+        }
+      }
+      .turn {
+        transform: rotate(180deg);
+      }
+    }
+    .collapse {
+      position: relative;
+      z-index: 1;
+      max-height: 0;
+      overflow: hidden;
+      top: -50px;
+      text-align: left;
+      padding: 15px;
+      color: $lightRed;
+      background-color: $lightGrey;
+      transition: max-height 0.4s ease-in-out, transform 0.4s ease-in-out;
+      @media screen and (max-width: $breakup) {
+        top: -30px;
+        padding: 10px;
+      }
+    }
+
+    .active {
+      transform: translateY(50px);
+      max-height: 300px;
+      margin-bottom: 30px;
+      @media screen and (max-width: $breakup) {
+        transform: translateY(30px);
+        margin-bottom: 20px;
+      }
+    }
   }
 }

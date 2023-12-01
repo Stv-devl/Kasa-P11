@@ -4,6 +4,9 @@
 
   .star {
     font-size: 25px;
+    @media screen and (max-width: $breakup) {
+      font-size: 18px;
+    }
   }
 
   .full {

@@ -8,11 +8,21 @@
   padding: 56px 3.3% 43px 3.3%;
   margin: 50px 0 50px 0;
   border-radius: 25px;
+  @media screen and (max-width: $breakup) {
+    @include center-column;
+    margin: 22px 0 27px 0;
+    padding: 0 3.3% 0 3.3%;
+    gap: 20px;
+    background-color: $white;
+  }
 
   .card-wrapper {
     position: relative;
     width: 100%;
     height: 340px;
+    @media screen and (max-width: $breakup) {
+      height: 255px;
+    }
 
     img {
       width: 100%;

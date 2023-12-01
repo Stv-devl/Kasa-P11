@@ -23,7 +23,7 @@ main {
   margin: 0 4%;
 }
 
-/*************Text link & img fit & icone color***************/
+/*************Text link & img fit***************/
 a,
 a:visited {
   color: $lightRed;
@@ -35,5 +35,4 @@ img {
 }
 
 /*************************breakup**************************/
-$breakup-tablette: 650px;
-$breakup-desktop: 1060px;
+$breakup: 660px;

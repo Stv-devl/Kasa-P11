@@ -1,14 +1,16 @@
 /*************************Setting mixin************************/
-@mixin center {
+@mixin center-row {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@mixin center-row {
+@mixin direction-row {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+}
+
+@mixin center-row-justify {
+  display: flex;
   justify-content: center;
 }
 
@@ -18,6 +20,18 @@
   justify-content: space-between;
 }
 
+@mixin space-between-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
 @mixin center-column {
   display: flex;
   flex-direction: column;
@@ -25,12 +39,9 @@
   justify-content: center;
 }
 
-@mixin direction-row {
+@mixin row-reverse-space-between-center {
   display: flex;
-  flex-direction: row;
-}
-
-@mixin direction-column {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 }

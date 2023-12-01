@@ -12,11 +12,21 @@ const Rent = ({ data }) => {
       </div>
 
       <div className="description-container">
-        <div className="profil-container">
+        <div className="title-tag-container">
           <div className="title-wrapper">
             <h2 className="appartement-page-title">{data.title}</h2>
             <p className="location">{data.location}</p>
           </div>
+          <ul className="tag-wrapper">
+            {data.tags.map((tag, index) => (
+              <li key={index} className="tag">
+                {tag}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="profil-rate-container">
           <div className="profil-wrapper">
             <p className="profil-name">
               {splitName[0]}
@@ -29,15 +39,6 @@ const Rent = ({ data }) => {
               alt={`appartement de ${data.host.name}`}
             />
           </div>
-        </div>
-        <div className="rating-container">
-          <ul className="tag-wrapper">
-            {data.tags.map((tag, index) => (
-              <li key={index} className="tag">
-                {tag}
-              </li>
-            ))}
-          </ul>
           <div className="star-wrapper">
             <Rating data={data} />
           </div>

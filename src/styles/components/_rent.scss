@@ -1,45 +1,69 @@
-.profil-container {
+.description-container {
   @include space-between-row;
-  color: $lightRed;
-  margin-top: 20px;
-
-  .title-wrapper {
-    text-align: left;
-
-    .location {
-      margin-top: 5px;
-    }
+  margin-top: 15px;
+  @media screen and (max-width: $breakup) {
+    display: block;
   }
 
-  .profil-wrapper {
-    @include center-row;
-    gap: 10px;
+  .title-tag-container {
+    display: block;
 
-    .profil-name {
-      text-align: right;
+    .title-wrapper {
+      text-align: left;
+
+      .location {
+        margin-top: 5px;
+        @media screen and (max-width: $breakup) {
+          margin-top: 10px;
+        }
+      }
     }
-    .profil-picture {
-      width: 64px;
-      height: 64px;
-      border-radius: 100%;
+    .tag-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+      @media screen and (max-width: $breakup) {
+        margin-top: 10px;
+      }
+
+      .tag {
+        @include center-row;
+        height: 25px;
+        background-color: $lightRed;
+        border-radius: 10px;
+        padding: 0 30px;
+        @media screen and (max-width: $breakup) {
+          padding: 0 10px;
+          height: 18px;
+        }
+      }
     }
   }
-}
-.rating-container {
-  @include space-between-row;
-  margin-top: 20px;
+  .profil-rate-container {
+    @include direction-column;
+    gap: 20px;
+    @media screen and (max-width: $breakup) {
+      @include row-reverse-space-between-center;
+      margin-top: 8px;
+    }
 
-  .tag-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    .profil-wrapper {
+      @include center-row;
+      gap: 10px;
 
-    .tag {
-      @include center;
-      height: 30px;
-      background-color: $lightRed;
-      border-radius: 10px;
-      padding: 3px 40px;
+      .profil-name {
+        text-align: right;
+      }
+      .profil-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        @media screen and (max-width: $breakup) {
+          width: 40px;
+          height: 40px;
+        }
+      }
     }
   }
 }

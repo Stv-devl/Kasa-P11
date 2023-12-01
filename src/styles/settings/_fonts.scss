@@ -3,6 +3,10 @@
 
 /**************************setting text***************************/
 
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 body {
   font-size: 18px;
   font-weight: 500;
@@ -17,26 +21,65 @@ h1 {
 .error {
   font-size: 288px;
   font-weight: 700;
+  @media screen and (max-width: $breakup) {
+    font-size: 96px;
+  }
 }
 
 .home-page-title {
   font-size: 48px;
   font-weight: 500;
   color: $white;
+  @media screen and (max-width: $breakup) {
+    font-size: 24px;
+    text-align: left;
+    padding: 0 16px;
+  }
 }
 
 .appartement-page-title,
 .oups {
   font-size: 36px;
   font-weight: 500;
+  @media screen and (max-width: $breakup) {
+    font-size: 18px;
+  }
 }
 
-footer,
-.nav-wrapper {
+.profil-name {
+  font-size: 18px;
+  @media screen and (max-width: $breakup) {
+    font-size: 12px;
+  }
+}
+.backHome,
+.location {
+  font-size: 18px;
+  @media screen and (max-width: $breakup) {
+    font-size: 14px;
+  }
+}
+.counter,
+.collapse-title,
+.collapse-list {
+  font-size: 18px;
+  @media screen and (max-width: $breakup) {
+    font-size: 13px;
+  }
+}
+
+.nav-wrapper,
+footer {
   font-size: 24px;
+  @media screen and (max-width: $breakup) {
+    font-size: 12px;
+  }
 }
 
 .tag {
   font-size: 14px;
   color: $white;
+  @media screen and (max-width: $breakup) {
+    font-size: 10px;
+  }
 }
