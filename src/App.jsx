@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Api from "./components/Api";
 import Banner from "./components/Banner";
@@ -18,8 +18,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home data={data} />} />
         <Route path="/home" element={<Home data={data} />} />
-        <Route path="/rent" element={<Appartement data={data} />} />
-        <Route path="/rent/:id" element={<Appartement data={data} />} />
+        <Route path="/appartement" element={<Appartement data={data} />} />
+        <Route path="/appartement/:id" element={<Appartement data={data} />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error />} />
       </Routes>

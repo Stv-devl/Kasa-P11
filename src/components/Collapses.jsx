@@ -10,7 +10,7 @@ const Collapses = ({ dataDrop, title, type }) => {
         <i className={`fa-solid fa-chevron-up ${IsOpen ? "turn" : ""}`}></i>
       </div>
       <ul className={`collapse ${IsOpen ? "active" : ""}`}>
-        {type === "desc" || type === "about" ? (
+        {type === "desc" ? (
           <li className="collapse-list">{dataDrop}</li>
         ) : (
           dataDrop.map((equipment, index) => (

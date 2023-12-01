@@ -1,9 +1,14 @@
 import Collapses from "./Collapses";
 import Carousel from "./Carousel";
 import Rating from "./Rating";
+import Profil from "./Profil";
+import Tags from "./Tags";
 
 const Rent = ({ data }) => {
-  let splitName = data.host.name.split(" ");
+  const collapseData = [
+    { dataDrop: data.description, title: "Description", type: "desc" },
+    { dataDrop: data.equipments, title: "Équipements", type: "list" },
+  ];
 
   return (
     <>
@@ -17,27 +22,14 @@ const Rent = ({ data }) => {
             <h2 className="appartement-page-title">{data.title}</h2>
             <p className="location">{data.location}</p>
           </div>
-          <ul className="tag-wrapper">
-            {data.tags.map((tag, index) => (
-              <li key={index} className="tag">
-                {tag}
-              </li>
-            ))}
-          </ul>
+          <div className="tag-wrapper">
+            <Tags data={data} />
+          </div>
         </div>
 
         <div className="profil-rate-container">
           <div className="profil-wrapper">
-            <p className="profil-name">
-              {splitName[0]}
-              <br />
-              {splitName[1]}
-            </p>
-            <img
-              className="profil-picture"
-              src={data.host.picture}
-              alt={`appartement de ${data.host.name}`}
-            />
+            <Profil data={data} />
           </div>
           <div className="star-wrapper">
             <Rating data={data} />
@@ -45,22 +37,17 @@ const Rent = ({ data }) => {
         </div>
       </div>
 
+      {/* for dont repeat collapse-wrapper 2 times*/}
       <div className="collapse-container">
-        <div className="collapse-wrapper">
-          <Collapses
-            dataDrop={data.description}
-            title="Description"
-            type="desc"
-          />
-        </div>
-
-        <div className="collapse-wrapper">
-          <Collapses
-            dataDrop={data.equipments}
-            title="Équipements"
-            type="list"
-          />
-        </div>
+        {collapseData.map((collapseData, index) => (
+          <div key={`collapse-wrapper${index}`} className="collapse-wrapper">
+            <Collapses
+              dataDrop={collapseData.dataDrop}
+              title={collapseData.title}
+              type={collapseData.type}
+            />
+          </div>
+        ))}
       </div>
     </>
   );

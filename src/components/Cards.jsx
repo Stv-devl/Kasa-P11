@@ -7,7 +7,7 @@ const Cards = ({ data }) => {
       {data &&
         data.map((data, index) => (
           <Link
-            to={`/rent/${data.id}`}
+            to={`/appartement/${data.id}`}
             key={`card ${index}`}
             className="card-wrapper"
           >

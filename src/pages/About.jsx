@@ -2,7 +2,6 @@ import Collapses from "../components/Collapses";
 import dataAbout from "../data/dataAbout";
 
 const About = () => {
-  console.log(dataAbout);
   return (
     <main>
       <img className="mountainsIgm" src="../Kalen-emsley.png" alt="mountains" />
@@ -12,7 +11,7 @@ const About = () => {
             <Collapses
               dataDrop={item.description}
               title={item.title}
-              type="about"
+              type="desc"
               key={index}
             />
           ))}

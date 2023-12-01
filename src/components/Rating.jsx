@@ -1,6 +1,6 @@
 const Rating = ({ data }) => {
   const getArray = (number) => {
-    //or use array.from(), mozilla dev
+    //or use array.from()
     let result = [];
     for (let i = 0; i < 5; i++) {
       i < number ? result.push(true) : result.push(false);

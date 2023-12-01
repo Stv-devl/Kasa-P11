@@ -1,48 +1,10 @@
 /***************************Setting colors***************************/
-/****************************setting fonts***************************/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
-/**************************setting text***************************/
-body {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-h1 {
-  font-size: 48px;
-  font-weight: 500;
-}
-
-.home-page-title {
-  font-size: 48px;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.appartement-page-title {
-  font-size: 36px;
-  font-weight: 500;
-  color: #ff6060;
-}
-
-footer,
-.nav-wrapper {
-  font-size: 24px;
-}
-footer .a,
-.nav-wrapper .a {
-  color: #ff6060;
-}
-
-.tag {
-  font-size: 14px;
-  color: #ffffff;
-}
-
 /*************************Setting mixin************************/
 /***************************************************************/
 /*setting*/
 /***************************************************************/
 /*************************Setting page**************************/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -60,7 +22,11 @@ body {
   margin: 0 auto;
 }
 
-/*************Text link & img fit & icone color***************/
+main {
+  margin: 0 4%;
+}
+
+/*************Text link & img fit***************/
 a,
 a:visited {
   color: #ff6060;
@@ -73,18 +39,139 @@ img {
 }
 
 /*************************breakup**************************/
+/****************************setting fonts***************************/
+/**************************setting text***************************/
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6060;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.error {
+  font-size: 288px;
+  font-weight: 700;
+}
+@media screen and (max-width: 660px) {
+  .error {
+    font-size: 96px;
+  }
+}
+
+.home-page-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: #ffffff;
+}
+@media screen and (max-width: 660px) {
+  .home-page-title {
+    font-size: 24px;
+    text-align: left;
+    padding: 0 16px;
+  }
+}
+
+.appartement-page-title,
+.oups {
+  font-size: 36px;
+  font-weight: 500;
+}
+@media screen and (max-width: 660px) {
+  .appartement-page-title,
+  .oups {
+    font-size: 18px;
+  }
+}
+
+.profil-name {
+  font-size: 18px;
+}
+@media screen and (max-width: 660px) {
+  .profil-name {
+    font-size: 12px;
+  }
+}
+
+.backHome,
+.location {
+  font-size: 18px;
+}
+@media screen and (max-width: 660px) {
+  .backHome,
+  .location {
+    font-size: 14px;
+  }
+}
+
+.counter,
+.collapse-title,
+.collapse-list {
+  font-size: 18px;
+}
+@media screen and (max-width: 660px) {
+  .counter,
+  .collapse-title,
+  .collapse-list {
+    font-size: 13px;
+  }
+}
+
+.nav-wrapper,
+footer {
+  font-size: 24px;
+}
+@media screen and (max-width: 660px) {
+  .nav-wrapper,
+  footer {
+    font-size: 12px;
+  }
+}
+
+.tag {
+  font-size: 14px;
+  color: #ffffff;
+}
+@media screen and (max-width: 660px) {
+  .tag {
+    font-size: 10px;
+  }
+}
+
 header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 45px 5% 50px 5%;
 }
+@media screen and (max-width: 660px) {
+  header {
+    margin: 20px 5% 25px 5%;
+  }
+}
+header .logo {
+  width: 210px;
+}
+@media screen and (max-width: 660px) {
+  header .logo {
+    width: 145px;
+  }
+}
 header nav {
   display: flex;
-  -moz-columns: 50%;
-       columns: 50%;
   gap: 57px;
+}
+@media screen and (max-width: 660px) {
+  header nav {
+    gap: 20px;
+  }
 }
 header nav a {
   transition: 0.4s ease-in-out;
@@ -104,33 +191,26 @@ footer {
   background-color: #000000;
   color: #ffffff;
   gap: 28px;
-  padding: 66px 0 29px 0;
   width: 100%;
-  margin-top: 60px;
+  height: 209px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 660px) {
+  footer {
+    gap: 18px;
+    margin-top: 5px;
+  }
+}
+footer .copyright {
+  display: block;
+}
+@media screen and (max-width: 660px) {
+  footer .copyright {
+    width: 40%;
+  }
 }
 
-.main-home {
-  margin: 0 4%;
-}
-.main-home .banner-image-wrapper {
-  position: relative;
-}
-.main-home .banner-image-wrapper h2 {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-.main-home .banner-image-wrapper .seaImage {
-  width: 100%;
-  height: 223px;
-  border-radius: 25px;
-  filter: brightness(0.65) contrast(150%);
-  z-index: 0;
-}
-.main-home .cards-container {
+.cards-container {
   background-color: #f6f6f6;
   display: grid;
   justify-content: center;
@@ -142,19 +222,36 @@ footer {
   margin: 50px 0 50px 0;
   border-radius: 25px;
 }
-.main-home .cards-container .card-wrapper {
+@media screen and (max-width: 660px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 22px 0 27px 0;
+    padding: 0 3.3% 0 3.3%;
+    gap: 20px;
+    background-color: #ffffff;
+  }
+}
+.cards-container .card-wrapper {
   position: relative;
   width: 100%;
   height: 340px;
 }
-.main-home .cards-container .card-wrapper img {
+@media screen and (max-width: 660px) {
+  .cards-container .card-wrapper {
+    height: 255px;
+  }
+}
+.cards-container .card-wrapper img {
   width: 100%;
   height: 100%;
   filter: brightness(0.7) contrast(130%);
   border-radius: 10px;
   z-index: 0;
 }
-.main-home .cards-container .card-wrapper .appartement-title {
+.cards-container .card-wrapper .appartement-title {
   position: absolute;
   text-align: left;
   width: 75%;
@@ -165,147 +262,381 @@ footer {
   color: #ffffff;
 }
 
-.appartements {
-  margin: 0 4%;
-  height: 100%;
-}
-.appartements .image_wrapper {
+.image_wrapper {
   position: relative;
 }
-.appartements .image_wrapper .appartement-image {
+.image_wrapper .appartement-image {
   width: 100%;
   height: 415px;
   border-radius: 25px;
 }
-.appartements .image_wrapper .fa-chevron-right,
-.appartements .image_wrapper .fa-chevron-left {
+@media screen and (max-width: 660px) {
+  .image_wrapper .appartement-image {
+    height: 215px;
+  }
+}
+.image_wrapper .fa-chevron-right,
+.image_wrapper .fa-chevron-left {
   position: absolute;
   color: #ffffff;
   font-size: 80px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
-.appartements .image_wrapper .fa-chevron-right:hover,
-.appartements .image_wrapper .fa-chevron-left:hover {
+@media screen and (max-width: 660px) {
+  .image_wrapper .fa-chevron-right,
+  .image_wrapper .fa-chevron-left {
+    font-size: 40px;
+  }
+}
+.image_wrapper .fa-chevron-right:hover,
+.image_wrapper .fa-chevron-left:hover {
   color: #ff6060;
 }
-.appartements .image_wrapper .fa-chevron-left {
+.image_wrapper .fa-chevron-left {
   top: 50%;
   left: 2%;
-  transform: translate(-2%, -50%);
+  transform: translateY(-50%);
 }
-.appartements .image_wrapper .fa-chevron-right {
+.image_wrapper .fa-chevron-right {
   top: 50%;
   right: 2%;
-  transform: translate(-2%, -50%);
+  transform: translateY(-50%);
 }
-.appartements .image_wrapper .counter {
+.image_wrapper .counter {
   position: absolute;
-  right: 50%;
   top: 90%;
-  transform: translate(-50%, -90%);
+  right: 50%;
+  transform: translateY(-50%);
   color: #ffffff;
 }
-.appartements .profil-container {
+
+.star-wrapper {
+  display: flex;
+  gap: 8px;
+}
+.star-wrapper .star {
+  font-size: 25px;
+}
+@media screen and (max-width: 660px) {
+  .star-wrapper .star {
+    font-size: 18px;
+  }
+}
+.star-wrapper .full {
+  color: #ff6060;
+}
+.star-wrapper .empty {
+  color: #bcbcbc;
+}
+
+.description-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: #ff6060;
-  margin-top: 20px;
+  margin-top: 15px;
 }
-.appartements .profil-container .title-wrapper {
+@media screen and (max-width: 660px) {
+  .description-container {
+    display: block;
+  }
+}
+.description-container .title-tag-container {
+  display: block;
+}
+.description-container .title-tag-container .title-wrapper {
   text-align: left;
 }
-.appartements .profil-container .title-wrapper .location {
+.description-container .title-tag-container .title-wrapper .location {
   margin-top: 5px;
 }
-.appartements .profil-container .profil-wrapper {
+@media screen and (max-width: 660px) {
+  .description-container .title-tag-container .title-wrapper .location {
+    margin-top: 10px;
+  }
+}
+.description-container .title-tag-container .tag-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 660px) {
+  .description-container .title-tag-container .tag-wrapper {
+    margin-top: 10px;
+  }
+}
+.description-container .title-tag-container .tag-wrapper .tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  background-color: #ff6060;
+  border-radius: 10px;
+  padding: 0 30px;
+}
+@media screen and (max-width: 660px) {
+  .description-container .title-tag-container .tag-wrapper .tag {
+    padding: 0 10px;
+    height: 18px;
+  }
+}
+.description-container .profil-rate-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 660px) {
+  .description-container .profil-rate-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+}
+.description-container .profil-rate-container .profil-wrapper {
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-.appartements .profil-container .profil-wrapper .profil-name {
+.description-container .profil-rate-container .profil-wrapper .profil-name {
   text-align: right;
 }
-.appartements .profil-container .profil-wrapper .profil-picture {
+.description-container .profil-rate-container .profil-wrapper .profil-picture {
   width: 64px;
   height: 64px;
   border-radius: 100%;
 }
-.appartements .rating-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 20px;
+@media screen and (max-width: 660px) {
+  .description-container .profil-rate-container .profil-wrapper .profil-picture {
+    width: 40px;
+    height: 40px;
+  }
 }
-.appartements .rating-container .tag-wrapper {
+
+.collapse-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.appartements .rating-container .tag-wrapper .tag {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  height: 30px;
-  background-color: #ff6060;
-  border-radius: 10px;
-  padding: 3px 40px;
-}
-.appartements .rating-container .star-wrapper {
-  display: flex;
-  gap: 8px;
-}
-.appartements .rating-container .star-wrapper .star {
-  font-size: 25px;
-}
-.appartements .rating-container .star-wrapper .full {
-  color: #ff6060;
-}
-.appartements .rating-container .star-wrapper .empty {
-  color: #bcbcbc;
-}
-.appartements .dropdown-container {
-  display: flex;
   gap: 8%;
   height: 100%;
+  margin-top: 24px;
 }
-.appartements .dropdown-container .dropdown-wrapper {
+@media screen and (max-width: 660px) {
+  .collapse-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+.collapse-container .collapse-wrapper {
   width: 46%;
-  margin: 24px 0 0 0;
   color: #ffffff;
 }
-.appartements .dropdown-container .dropdown-wrapper .menu-wrapper {
-  position: relative;
-  z-index: 2;
+@media screen and (max-width: 660px) {
+  .collapse-container .collapse-wrapper {
+    width: 100%;
+  }
+}
+.collapse-container .collapse-wrapper .menu-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
   align-items: center;
   height: 52px;
   background-color: #ff6060;
   border-radius: 10px;
   padding: 15px 20px 15px 10px;
 }
-.appartements .dropdown-container .dropdown-wrapper .menu-wrapper .fa-chevron-up {
+@media screen and (max-width: 660px) {
+  .collapse-container .collapse-wrapper .menu-wrapper {
+    height: 30px;
+  }
+}
+.collapse-container .collapse-wrapper .menu-wrapper .fa-chevron-up {
   font-size: 25px;
   cursor: pointer;
+  transform: rotate(0);
+  transition: transform 0.4s ease-in-out;
 }
-.appartements .dropdown-container .dropdown-wrapper .dropdown {
+@media screen and (max-width: 660px) {
+  .collapse-container .collapse-wrapper .menu-wrapper .fa-chevron-up {
+    font-size: 18px;
+  }
+}
+.collapse-container .collapse-wrapper .menu-wrapper .turn {
+  transform: rotate(180deg);
+}
+.collapse-container .collapse-wrapper .collapse {
   position: relative;
   z-index: 1;
   max-height: 0;
   overflow: hidden;
   top: -50px;
   text-align: left;
+  padding: 15px;
   color: #ff6060;
   background-color: #f6f6f6;
-  padding: 15px;
   transition: max-height 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
-.appartements .dropdown-container .dropdown-wrapper .active {
+@media screen and (max-width: 660px) {
+  .collapse-container .collapse-wrapper .collapse {
+    top: -30px;
+    padding: 10px;
+  }
+}
+.collapse-container .collapse-wrapper .active {
   transform: translateY(50px);
   max-height: 300px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 660px) {
+  .collapse-container .collapse-wrapper .active {
+    transform: translateY(30px);
+    margin-bottom: 20px;
+  }
+}
+
+.collapse-container-about {
+  display: flex;
+  justify-content: center;
+}
+.collapse-container-about .collapse-wrapper-about {
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+  color: #ffffff;
+}
+@media screen and (max-width: 660px) {
+  .collapse-container-about .collapse-wrapper-about {
+    width: 100%;
+  }
+}
+.collapse-container-about .collapse-wrapper-about .menu-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  height: 52px;
+  background-color: #ff6060;
+  border-radius: 10px;
+  padding: 15px 20px 15px 10px;
+}
+@media screen and (max-width: 660px) {
+  .collapse-container-about .collapse-wrapper-about .menu-wrapper {
+    height: 30px;
+  }
+}
+.collapse-container-about .collapse-wrapper-about .menu-wrapper .fa-chevron-up {
+  font-size: 25px;
+  cursor: pointer;
+  transform: rotate(0);
+  transition: transform 0.4s ease-in-out;
+}
+@media screen and (max-width: 660px) {
+  .collapse-container-about .collapse-wrapper-about .menu-wrapper .fa-chevron-up {
+    font-size: 18px;
+  }
+}
+.collapse-container-about .collapse-wrapper-about .menu-wrapper .turn {
+  transform: rotate(180deg);
+}
+.collapse-container-about .collapse-wrapper-about .collapse {
+  position: relative;
+  z-index: 1;
+  max-height: 0;
+  overflow: hidden;
+  top: -50px;
+  text-align: left;
+  padding: 15px;
+  color: #ff6060;
+  background-color: #f6f6f6;
+  transition: max-height 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+@media screen and (max-width: 660px) {
+  .collapse-container-about .collapse-wrapper-about .collapse {
+    top: -30px;
+    padding: 10px;
+  }
+}
+.collapse-container-about .collapse-wrapper-about .active {
+  transform: translateY(50px);
+  max-height: 300px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 660px) {
+  .collapse-container-about .collapse-wrapper-about .active {
+    transform: translateY(30px);
+    margin-bottom: 20px;
+  }
+}
+
+.banner-image-wrapper {
+  position: relative;
+}
+.banner-image-wrapper h2 {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.banner-image-wrapper .seaImage {
+  width: 100%;
+  height: 223px;
+  border-radius: 25px;
+  filter: brightness(0.65) contrast(150%);
+  z-index: 0;
+}
+@media screen and (max-width: 660px) {
+  .banner-image-wrapper .seaImage {
+    height: 111px;
+  }
+}
+
+.mountainsIgm {
+  width: 100%;
+  height: 223px;
+  border-radius: 25px;
+  margin-bottom: 38px;
+}
+@media screen and (max-width: 660px) {
+  .mountainsIgm {
+    height: 111px;
+    margin-bottom: 19px;
+  }
+}
+
+.error {
+  margin: 139px 0;
+}
+@media screen and (max-width: 660px) {
+  .error {
+    margin: 113px 0;
+  }
+}
+
+.oups {
+  margin-bottom: 139px;
+}
+@media screen and (max-width: 660px) {
+  .oups {
+    margin: 113px 0;
+  }
+}
+
+.backHome {
+  display: inline-block;
+  height: 12px;
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */
