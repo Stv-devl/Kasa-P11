@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Api from "./components/Api";
+import Api from "./api/Api";
 import Banner from "./components/Banner";
 import Home from "./pages/Home";
 import Appartement from "./pages/Appartement";
