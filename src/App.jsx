@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Api from "./api/Api";
+import Datas from "./data/datas";
 import Banner from "./components/Banner";
 import Home from "./pages/Home";
 import Appartement from "./pages/Appartement";
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Banner />
-      <Api setData={setData} />
+      <Datas setData={setData} />
       <Routes>
         <Route path="/" element={<Home data={data} />} />
         <Route path="/home" element={<Home data={data} />} />
