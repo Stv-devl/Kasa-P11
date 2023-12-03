@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Collapses = ({ dataDrop, title, type }) => {
+const Collapses = ({ description, title, type }) => {
   const [IsOpen, setIsOpen] = useState(false);
 
   return (
@@ -10,11 +10,11 @@ const Collapses = ({ dataDrop, title, type }) => {
         <i className={`fa-solid fa-chevron-up ${IsOpen ? "turn" : ""}`}></i>
       </div>
       <ul className={`collapse ${IsOpen ? "active" : ""}`}>
-        {type === "desc" ? (
-          <li className="collapse-list">{dataDrop}</li>
+        {type === "desc" || type === "about" ? (
+          <li className="collapse-list">{description}</li>
         ) : (
-          dataDrop.map((equipment, index) => (
-            <li key={index} className="collapse-list">
+          description.map((equipment, index) => (
+            <li key={`list${index}`} className="collapse-list">
               {equipment}
             </li>
           ))

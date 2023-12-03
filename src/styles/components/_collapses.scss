@@ -74,7 +74,9 @@
 
 //////////////////////about/////////////////////////
 .collapse-container-about {
-  @include center-row-justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .collapse-wrapper-about {
     @include direction-column;

@@ -1,7 +1,7 @@
 import React from "react";
 
-const Profil = ({ data }) => {
-  let splitName = data.host.name.split(" ");
+const Profil = ({ data: { host } }) => {
+  let splitName = host.name.split(" ");
 
   return (
     <div className="profil-wrapper">
@@ -12,8 +12,8 @@ const Profil = ({ data }) => {
       </p>
       <img
         className="profil-picture"
-        src={data.host.picture}
-        alt={`appartement de ${data.host.name}`}
+        src={host.picture}
+        alt={`appartement de ${host.name}`}
       />
     </div>
   );

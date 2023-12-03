@@ -1,13 +1,14 @@
-import Collapses from "./Collapses";
 import Carousel from "./Carousel";
 import Rating from "./Rating";
 import Profil from "./Profil";
 import Tags from "./Tags";
+import CollapsesWrapper from "./CollapsesWrapper";
 
 const Rent = ({ data }) => {
+  const { title, location, description, equipments, tags, host, rating } = data;
   const collapseData = [
-    { dataDrop: data.description, title: "Description", type: "desc" },
-    { dataDrop: data.equipments, title: "Équipements", type: "list" },
+    { description: description, title: "Description", type: "desc" },
+    { description: equipments, title: "Équipements", type: "list" },
   ];
 
   return (
@@ -19,35 +20,26 @@ const Rent = ({ data }) => {
       <div className="description-container">
         <div className="title-tag-container">
           <div className="title-wrapper">
-            <h2 className="appartement-page-title">{data.title}</h2>
-            <p className="location">{data.location}</p>
+            <h2 className="appartement-page-title">{title}</h2>
+            <p className="location">{location}</p>
           </div>
           <div className="tag-wrapper">
-            <Tags data={data} />
+            <Tags data={{ tags }} />
           </div>
         </div>
 
         <div className="profil-rate-container">
           <div className="profil-wrapper">
-            <Profil data={data} />
+            <Profil data={{ host }} />
           </div>
           <div className="star-wrapper">
-            <Rating data={data} />
+            <Rating data={{ rating }} />
           </div>
         </div>
       </div>
 
-      {/* for dont repeat collapse-wrapper 2 times*/}
       <div className="collapse-container">
-        {collapseData.map((collapseData, index) => (
-          <div key={`collapse-wrapper${index}`} className="collapse-wrapper">
-            <Collapses
-              dataDrop={collapseData.dataDrop}
-              title={collapseData.title}
-              type={collapseData.type}
-            />
-          </div>
-        ))}
+        <CollapsesWrapper collapseData={collapseData} />
       </div>
     </>
   );

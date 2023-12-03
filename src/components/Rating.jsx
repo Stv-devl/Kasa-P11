@@ -1,4 +1,4 @@
-const Rating = ({ data }) => {
+const Rating = ({ data: { rating } }) => {
   const getArray = (number) => {
     //or use array.from()
     let result = [];
@@ -10,7 +10,7 @@ const Rating = ({ data }) => {
 
   return (
     <>
-      {getArray(data.rating).map((result, index) => (
+      {getArray(rating).map((result, index) => (
         <div key={index} className="star">
           <i className={`fa-solid fa-star ${result ? "full" : "empty"}`}></i>
         </div>
