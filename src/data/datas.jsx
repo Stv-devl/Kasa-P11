@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
-const Datas = ({ setData }) => {
+const Datas = () => {
+  const [data, setData] = useState(null);
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -14,7 +16,7 @@ const Datas = ({ setData }) => {
     getData();
   }, [setData]);
 
-  return null;
+  return { data };
 };
 
 export default Datas;

@@ -1,8 +1,10 @@
 import Rent from "../components/Rent";
 import { useParams } from "react-router-dom";
+import Datas from "../data/datas";
 
-const Appartement = ({ data }) => {
-  let { id } = useParams();
+const Appartement = () => {
+  const { data } = Datas();
+  const { id } = useParams();
 
   return (
     <main>

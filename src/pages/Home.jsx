@@ -1,6 +1,8 @@
 import Cards from "../components/Cards";
+import Datas from "../data/datas";
 
-const Home = ({ data }) => {
+const Home = () => {
+  const { data } = Datas();
   return (
     <main>
       <div className="banner-image-wrapper">
