@@ -1,6 +1,6 @@
 import Rent from "../components/Rent";
 import { useParams } from "react-router-dom";
-import Datas from "../data/datas";
+import Datas from "../services/Datas";
 
 const Appartement = () => {
   const { data } = Datas();

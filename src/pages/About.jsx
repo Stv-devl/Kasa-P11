@@ -1,4 +1,4 @@
-import dataAbout from "../data/dataAbout";
+import dataAbout from "../services/dataAbout";
 import CollapsesWrapper from "../components/CollapsesWrapper";
 
 const About = () => {

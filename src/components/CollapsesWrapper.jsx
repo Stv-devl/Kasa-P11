@@ -9,6 +9,7 @@ const CollapsesWrapper = ({ collapseData }) => {
           className={`collapse-wrapper${data.type === "about" ? "-about" : ""}`}
         >
           <Collapses
+            key={`collapse ${index}`}
             description={data.description}
             title={data.title}
             type={data.type}

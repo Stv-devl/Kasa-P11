@@ -1,5 +1,5 @@
 import Cards from "../components/Cards";
-import Datas from "../data/datas";
+import Datas from "../services/Datas";
 
 const Home = () => {
   const { data } = Datas();

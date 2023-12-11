@@ -14,7 +14,7 @@ const Datas = () => {
       }
     };
     getData();
-  }, [setData]);
+  }, []);
 
   return { data };
 };
