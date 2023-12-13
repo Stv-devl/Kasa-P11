@@ -1,10 +1,7 @@
 import { useState } from "react";
 
 const Collapses = ({ description, title, type }) => {
-  console.log(description);
-
   const [IsOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <div className="menu-wrapper" onClick={() => setIsOpen(!IsOpen)}>
@@ -25,5 +22,4 @@ const Collapses = ({ description, title, type }) => {
     </>
   );
 };
-
 export default Collapses;

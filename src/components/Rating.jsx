@@ -18,5 +18,4 @@ const Rating = ({ data: { rating } }) => {
     </>
   );
 };
-
 export default Rating;

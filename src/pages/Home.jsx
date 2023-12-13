@@ -3,6 +3,7 @@ import Datas from "../services/Datas";
 
 const Home = () => {
   const { data } = Datas();
+
   return (
     <main>
       <div className="banner-image-wrapper">

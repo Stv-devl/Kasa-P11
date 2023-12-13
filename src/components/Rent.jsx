@@ -10,7 +10,6 @@ const Rent = ({ data }) => {
     { description: description, title: "Description", type: "desc" },
     { description: equipments, title: "Équipements", type: "list" },
   ];
-
   return (
     <>
       <div className="carousel-container">
@@ -44,5 +43,4 @@ const Rent = ({ data }) => {
     </>
   );
 };
-
 export default Rent;
